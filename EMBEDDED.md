@@ -130,63 +130,63 @@ Types of Communication Protocol:
    ## 1.Push Button Controlled Traffic Light
    
    1.Simple circuit tht blinks red when pressed once yellow when pressed twice and green when pressed 
-   thrice
+   thrice.
    2.Components required: Arduino Uno(AU), Red LED, Yellow LED, Green LED, 3 100 ohm resistor, Push  
    Button, 10k ohm resistor, Connecting Wires.   
    3.Connect +ve terminal of the leds to digital pins and negative terminals to resistors connected to
    ground.
    4.Connect the 1b of the push button to the positive line of the breadboard and 2a to the resistor 
-   connecting to the ground and to the Digital pin 
+   connecting to the ground and to the Digital pin.
    5.Provide the voltage and ground lines to the arduino
    6.Code of the program can be found here : https://www.tinkercad.com/things/fTGGaq7U7ay-bi0s-1/editel?sharecode=wSzCGNAlEDgmS42qSxWAChMbQL45_4ThrevXqURgEhA
    
    ## 2.Servo Motor Movement based of potentiometer value
    
-   1.Servo motor moves according to potentiometer value
-   2.Components:Servo motor,Potentiometer,ARDUINO UNO,connecting wires,Breadboard
+   1.Servo motor moves according to potentiometer value.
+   2.Components:Servo motor,Potentiometer,ARDUINO UNO,connecting wires,Breadboard.
    3.Connect the ground and power of potentiometer accordingly and afterwards connect the output pin 
-   to analogue pin A0 on the arduino
+   to analogue pin A0 on the arduino.
    3.Similarly connect the ground and power to the servo meter and connect the middle pin to the Digi
-   tal pin(~PWM)
+   tal pin(~PWM).
    4.The code associated can be obtained here:https://www.tinkercad.com/things/4tP7qeHpVUw-bi0s-2/editel?sharecode=u7rrbAj9Rax1ahm8cYE2fUk-Sed4z0_YO8oCmG1OG3I
    
    ## 2.LCD Quiz
    
-   1.Complex circuit with I2C LCD board and code logic requirements
+   1.Complex circuit with I2C LCD board and code logic requirements.
    2.Components:LCD 16X2 (I2C),ARDUINO UNO, 4 push buttons,Resistors 10k ohm X4,Breadboard,Connecting 
-   Wires
+   Wires.
    3.Connect the voltage line to the 1b of each push buttons and connect the resistors from the ground
-   line to 2a
-   4.Connect the input lines from 2a of the resistors to the digital pins of the ARDUINO UNO
+   line to 2a.
+   4.Connect the input lines from 2a of the resistors to the digital pins of the ARDUINO UNO.
    5.The Code assosiated with the challenge can be found here:https://www.tinkercad.com/things/hvScZ7eJ1YZ-bi0s-3/editel?sharecode=ym304V63kV2VjdppHrmpSrGTSTzRWJM0YoQ7DUsgapw
    
 ## Arduino Practice Projects
    ## 1.Temperature Sensitive Fan:
-   1.A fan tht increases speed depending on the temperature
-   2.Components:ARDUINO UNO,TMP36,DC Motor
+   1.A fan tht increases speed depending on the temperature.
+   2.Components:ARDUINO UNO,TMP36,DC Motor.
    3.Connect the groung and power wires of the tmp36 to the groung and power of arduino,Similarly
-   connect the ground of the fan to the Arduino GND and the power pin to the digital output pin
-   4.Connect the signal wire to the analogue A0 of the ide
+   connect the ground of the fan to the Arduino GND and the power pin to the digital output pin.
+   4.Connect the signal wire to the analogue A0 of the ide.
    5.The assosiated code is given here:https://www.tinkercad.com/things/bpABWoKy0fa-fan/editel?sharecode=gaNiZGu6cxTSrnRvcRs-oqfvvOn3iY4H5OXkQ7ovAFk
    
    ## 2.Photo Sensitive LED
-   1.An Led tht depends on th amount of light in the surroundings
-   2.Components:LED,Photoresistor,Resistor 10 ohm,ARDUINO UNO
+   1.An Led tht depends on th amount of light in the surroundings.
+   2.Components:LED,Photoresistor,Resistor 10 ohm,ARDUINO UNO.
    3.Connect The ground of the led to the Breadboard ground line and the power to the digital(~PWM)
-   pin of the arduino
+   pin of the arduino.
    4.Similarly Connect the power pin of the Photoresistor to the resistor and connect the resistor to 
-   power line of the breadboard
+   power line of the breadboard.
    5.Connect the input wire to the power pin of the photoresistor and connect it to the analog pin
-   A0
+   A0.
    6.The Code of the programme can be found here:https://www.tinkercad.com/things/0SMilVXJbBV-photosensitive-lighting/editel?sharecode=r5XVjiKtlub4iIVE4-bzdKC9fbiKMIRKr2n3_eziXNA
    
    ## 3.Distance Detector
-   1.Three LEDs tht light up depending on the distance from the sensor
-   2.Components:Ultrasonic Distance Sensor,LED X3,ARDUINO UNO
-   3.Connect the GND and Power of the sensor to the GND and power of the ARDUINO
+   1.Three LEDs tht light up depending on the distance from the sensor.
+   2.Components:Ultrasonic Distance Sensor,LED X3,ARDUINO UNO.
+   3.Connect the GND and Power of the sensor to the GND and power of the ARDUINO.
    4.Connect the ground of the LEDS to the GND of the ARDUINO and the power of leds to individual 
-   digital pins
-   5.The code for this challenge can be accessed here:https://www.tinkercad.com/things/2FDnhCUIwN2-fantastic-krunk-lahdi/editel?sharecode=nPSnrl4eBnNO3Q49A0OLQz7ia3cCfBr1yh8u8Aq-VPo
+   digital pins.
+   5.The code for this challenge can be accessed here:https://www.tinkercad.com/things/2FDnhCUIwN2-fantastic-krunk-lahdi/editel?sharecode=nPSnrl4eBnNO3Q49A0OLQz7ia3cCfBr1yh8u8Aq-VPo.
    
    
    
