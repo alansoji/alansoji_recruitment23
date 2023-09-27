@@ -1,31 +1,34 @@
-﻿## Embedded
+﻿﻿## Embedded
 
 ## Basics of Arduino
 
 Arduino is tool that helps you control electronic stuff with code
 
-   ## Arduino Trifecta
-   
-   1. Hardware
-   2. IDE
-   3. Code
 
 ## Basic Serial Communication Protocol
 
 Types of Communication Protocol:
-1. Synchronous Comunication Protocol(SPI,I2C)
-2. Asynchronous Comunication Protocol(UART,CAN)
+ - Synchronous Comunication Protocol
+ - Asynchronous Comunication Protocol
 
    ## UART (Universal Asynchronous Receiver Transmitter)
-   1. It is an Asynchronous Communication Protocol.
-   2. Is ia Ad-Hoc type of Topology.
-   3. It consist of two main components:Transmitter and Receiver.
-   4. It uses Start bit and Stop bit before and after each transmission of data.
-   5. It has Baud rate that defines the speed at which data is transmitted and both transmitter and receiver should be on same baud rate.
-   6. UART is highly configurable.
-   7. UART communication is reliable for short to moderate distances.
-   8. UART is commonly used in embedded systems for communication between microcontrollers, sensors, display modules, GPS modules, and other peripheral devices.
-   9. It is also used for communication with computers and other external equipment.
+1.  **Asynchronous Communication Protocol**: UART employs an asynchronous communication protocol, where data transmission does not rely on a shared clock signal between the communicating devices.
+    
+2.  **Ad-Hoc Topology**: UART does not adhere to a specific network topology and is adaptable to various system configurations, operating effectively in ad-hoc setups.
+    
+3.  **Component Structure**: UART comprises two fundamental components: the Transmitter, responsible for sending data, and the Receiver, tasked with receiving transmitted data.
+    
+4.  **Start and Stop Bits**: Each data transmission in UART begins with a start bit and concludes with a stop bit, framing the actual data for accurate reception.
+    
+5.  **Baud Rate Definition**: UART employs a baud rate, specifying the transmission speed at which data is sent and received. Synchronization necessitates both the transmitter and receiver to operate at the same baud rate.
+    
+6.  **Configurability**: UART possesses a high degree of configurability, allowing customization of parameters such as data bits, parity, and stop bits to suit specific communication requirements.
+    
+7.  **Reliable Communication within Limited Ranges**: UART communication is notably reliable for short to moderate distances, ensuring dependable data transfer within specified ranges.
+    
+8.  **Embedded Systems Integration**: UART finds extensive application in embedded systems, facilitating communication between microcontrollers, sensors, display modules, GPS modules, and various other peripheral devices.
+    
+9.  **Diverse Applications**: Additionally, UART serves as a pivotal communication interface for interaction between computers and external equipment, showcasing its versatility and widespread usage.
 
       Programming Approach
 
@@ -36,13 +39,6 @@ Types of Communication Protocol:
       It ia method in which the Transmit register transfers full data to shift register and the shift register and it transfers this data byte by byte to the
       next device were the process is called parallel in serial out. The shift register of the next device collect the data one by one and transfer it to the
       receiver register all at once were the process is called serial in parallel out.
-
-      UART Configuration
-
-      1. Clock configuration
-      2. Data Loading
-      3. Data Transmission
-      4. Monitor data: Looping Method or Interrupt Method
 
       Advantages of UART:
       - Easy to interface
@@ -56,74 +52,105 @@ Types of Communication Protocol:
         
    ## I2C (Inter-Integrated Circuit)
 
-   1. It is a Synchronous Comunication Protocol, invented by Philips.
-   2. I2C uses only two wires for communication - one for data (SDA) and one for the clock (SCL).
-   3. I2C network uses master-slave architecture, there is one master device and one or more slave devices.
-   4. Both the data (SDA) and clock (SCL) lines are bidirectional, allowing data to flow in both directions between the master and slave devices
-   5. Each slave device on the bus has a unique 7-bit or 10-bit address, allowing the master to select a specific device for communication.
-   6. The master device generates the clock signal (SCL), ensuring synchronization of data transmission between devices.
-   7. Data is transferred in frames, with each frame consisting of 8 bits (1 byte). It may include a 9th bit for acknowledgment or other purposes.
-   8. After each byte of data is sent, the receiving device acknowledges its successful reception by pulling the SDA line low (ACK) or leaving it high (NACK) to signal an error or end of communication.
-   9. I2C supports multiple clock speeds, such as standard mode (100 kbps), fast mode (400 kbps), and high-speed mode (up to 3.4 Mbps)
-   10. I2C is suitable for short-distance communication within a single board or between closely located devices due to its limited range.
-   11. I2C is relatively simple compared to other communication protocols like SPI or UART.
-   Bus Arbitration:
+ - **Origin and Basics**: I2C is a way for devices to talk to each other. It was made by Philips.
+
+ -   **Two Wires**: It uses just two wires - one for messages (SDA) and one for timing (SCL).
+    
+ -   **Master and Slaves**: There's a main boss (master) and other workers (slaves) in this system.
+    
+ -   **Two-Way Traffic**: The boss and workers can talk back and forth using those two wires.
+    
+ -   **Address for Each Worker**: Each worker has its own special name (address) so the boss can talk to a specific worker.
+    
+ -   **Boss Sets the Beat**: The boss controls the timing, making sure everyone is on the same page.
+    
+ -   **Messages in Bytes**: Information is sent in chunks of 8 bits (bytes).
+    
+ -   **Saying "Got It"**: After each chunk, the worker says "got it" or "not got it" to the boss.
+    
+ -   **Different Speeds**: They can talk fast or slow, depending on what they're doing.
+    
+ -   **Short-Distance Chat**: It's good for talking to neighbors, not for shouting across the town.
+    
+ -   **Simple Compared to Others**: It's easier to use than some other talking methods.
+ 
+  Bus Arbitration:
+   
    It is the process of determining which device on the I2C bus gets to transmit data or initiate a communication transaction when multiple devices are connected to the same bus. I2C is a multi-master communication protocol, which means that multiple devices can be connected to the same bus, and they can all act as both masters and slaves. As a result, there needs to be a way to resolve conflicts when multiple devices try to communicate simultaneously.
    Clock Stretching:
    It a feature that allows one of the devices on the bus, typically the slave device, to temporarily hold the SCL (Serial Clock) line low to slow down the master device's clock when it needs more time to process data. This helps in preventing data overrun and ensuring reliable communication between devices with potentially different processing speeds or response times.
    
    Advantages of I2C
-   - Two wires only
-   - Multimater Compatibility
-   - Better Error Handling
-   - Different mode flexibility for Slave
+ - Two wires only
+ - Multimater Compatibility
+ - Better Error Handling
+ - Different mode flexibility for Slave
 
    Disadvantages of I2C
-   - Less Flexibility for Slave address
-   - Complexity of Firmware
-   - Increased Data Overhead
-   - Hardware Limitations
-   - Bus Topology
+ - Less Flexibility for Slave address
+ - Complexity of Firmware
+ - Increased Data Overhead
+ - Hardware Limitations
+ - Bus Topology
    ## SPI (Serial Perpheral Interface)
-
-   1. It is a Synchronous Comunication Protocol.
-   2. SPI supports multiple slave devices on the same bus.
-   3. Each slave device has a unique chip select (CS) or slave select (SS) line that the master uses to select the specific slave with which it wants to communicate.
-   4. SPI allows for full-duplex communication, which means that data can be transmitted in both directions simultaneously.This is achieved by having separate data lines for sending data from the master to the slave (MOSI - Master Out Slave In) and from the slave to the master (MISO - Master In Slave Out).
-   5.  SPI transfers data serially, one bit at a time. The data bits are sent sequentially over the MOSI and MISO lines. Data is usually sent in 8-bit or 16-bit chunks, but the word size can be configured based on the devices involved.
-   6. SPI supports two clock configuration modes: CPOL (Clock Polarity) and CPHA (Clock Phase).
-   7. SPI usually consists of at least four pins: MOSI, MISO, SCLK (Serial Clock), and SS/CS (Slave Select/Chip Select).
-   8. Unlike I2C, SPI does not involve addressing in the data packets. The master selects a specific slave by asserting the appropriate CS/SS line.
-   9. SPI is suitable for short-distance communication, typically within a single PCB (Printed Circuit Board) or between closely located devices.
-   10. SPI has minimal protocol overhead since it does not include addressing or acknowledgment signals.
+1.  **Synchronous Communication Protocol**: SPI operates as a synchronous communication protocol, requiring synchronized timing between the transmitting and receiving devices.
+    
+2.  **Support for Multiple Slave Devices**: The SPI protocol is designed to accommodate multiple slave devices connected to the same bus. Each slave device possesses a unique chip select (CS) or slave select (SS) line, enabling the master to designate a specific slave for communication.
+    
+3.  **Full-Duplex Communication**: SPI supports full-duplex communication, allowing simultaneous data transmission in both directions. This capability is facilitated by dedicated data lines: MOSI (Master Out Slave In) for master-to-slave data transmission and MISO (Master In Slave Out) for slave-to-master data transmission.
+    
+4.  **Serial, Bit-by-Bit Data Transfer**: SPI transfers data serially, transmitting one bit at a time. The data bits are sent sequentially over the MOSI and MISO lines. Data is commonly sent in chunks of 8 or 16 bits, although the word size can be configured based on the specific devices involved.
+    
+5.  **Clock Configuration Modes**: SPI supports two clock configuration modes, namely CPOL (Clock Polarity) and CPHA (Clock Phase), providing flexibility in clock signal characteristics to suit different device requirements.
+    
+6.  **Pin Configuration**: Typically, SPI implementations involve at least four pins: MOSI for data transmission, MISO for data reception, SCLK (Serial Clock) for synchronization, and SS/CS (Slave Select/Chip Select) to designate the target slave device.
+    
+7.  **No Addressing in Data Packets**: In contrast to I2C, SPI does not incorporate addressing within the data packets. Instead, the master selects a specific slave for communication by asserting the relevant CS/SS line.
+    
+8.  **Suitability for Short-Distance Communication**: SPI is well-suited for short-distance communication, typically within a single Printed Circuit Board (PCB) or between closely located devices.
+    
+9.  **Minimal Protocol Overhead**: SPI exhibits minimal protocol overhead as it omits addressing and acknowledgment signals, streamlining the communication process and enhancing efficiency.
 
    Advantages of SPI
-   - Low Power Consumption
-   - SPI is faster than I2C
-   - Easy to Interface
-   - Different Modes of Transmission
+ - Low Power Consumption
+ - SPI is faster than I2C
+ - Easy to Interface
+ - Different Modes of Transmission
 
    Disadvantages of SPI
-   - Atleast 4 connections are required
-   - Does not support Multimaster
-   - More GPIOs for more Slaves
+ - Atleast 4 connections are required
+ - Does not support Multimaster
+ - More GPIOs for more Slaves
      
    ## CAN (Control Area Network)
+1.  **Asynchronous Communication Protocol with a Notable Originator**: CAN (Controller Area Network) is an asynchronous communication protocol initially conceived by Robert Bosch.
+    
+2.  **Two-Wire Bus System for Data Transmission and Reception**: CAN typically employs a two-wire bus system: one wire for transmitting data (CAN-High or CAN-H) and another for receiving data (CAN-Low or CAN-L).
+    
+3.  **EMI Reduction and Reliable Data Transfer**: CAN architecture is designed to minimize electromagnetic interference (EMI) and ensure consistent and reliable data transfer.
+    
+4.  **Multi-Master Architecture for Concurrent Data Transmission and Reception**: CAN supports a multi-master architecture, allowing multiple Electronic Control Units (ECUs) to simultaneously transmit and receive data on the same bus without a centralized master controller.
+    
+5.  **Deterministic Communication with Predictable Transmission Time**: CAN provides deterministic communication, offering messages with a predictable and guaranteed transmission time.
+    
+6.  **Message-Based Communication Model with Priority Identification**: CAN adopts a message-based communication model, organizing data into frames with unique identifiers (IDs) that determine message priority and content.
+    
+7.  **Non-Destructive Bitwise Arbitration for Data Transmission Priority**: CAN utilizes a non-destructive bitwise arbitration mechanism to establish data transmission priority when multiple nodes attempt to send messages concurrently.
+    
+8.  **Incorporated Error Detection and Handling Mechanisms**: CAN integrates error detection and handling mechanisms within its protocol. Nodes actively monitor the bus for errors such as bit errors, frame errors, and other fault conditions, and take corrective actions or retransmit data accordingly.
+    
+9.  **Message Prioritization Using CAN Identifier (ID)**: CAN enables message prioritization through the CAN identifier (ID), where lower ID values represent higher-priority messages, ensuring critical data is transmitted ahead of less critical data.
+    
+10.  **Extensibility and Scalability for Varied Applications**: CAN is extensible and scalable, catering to a wide range of applications. CAN networks can vary in size from a few nodes to hundreds or thousands interconnected through bridges or gateways.
+    
+11.  **Fault Tolerance with Operational Continuity**: The CAN network can maintain operation even in the presence of node failures, ensuring system resilience.
+    
+12.  **Prominent Application in Automotive Industry**: CAN finds extensive use in the automotive industry, particularly in applications like engine control, vehicle diagnostics, and infotainment systems.
+    
+13.  **Standardization under ISO 11898**: CAN adheres to standardization defined by ISO 11898, encompassing physical and data-link layer specifications.
+    
+14.  **Renowned for High Reliability and Robustness**: CAN is widely recognized for its high reliability and robustness, rendering it suitable for demanding environments characterized by noise and harsh conditions.
 
-   1. It is an Asynchronous Communication Protocol, invented by Robert Bosch.
-   2. CAN typically uses a two-wire bus system: one wire for transmitting data (CAN-High or CAN-H) and one wire for receiving data (CAN-Low or CAN-L).
-   3. It helps to reduce electromagnetic interference (EMI) and ensures reliable data transfer.
-   4. CAN supports a multi-master architecture, meaning that multiple ECUs can simultaneously transmit and receive data on the same bus without a centralized master controller.
-   5. CAN offers deterministic communication, meaning that messages have a predictable and guaranteed transmission time.
-   6. CAN uses a message-based communication model. Data is organized into frames, with each frame containing an identifier (ID) that defines the message's priority and content.
-   7. CAN uses a non-destructive bitwise arbitration mechanism to determine which node gets to transmit data when multiple nodes attempt to send messages simultaneously.
-   8. CAN incorporates built-in error detection and handling mechanisms. Nodes monitor the bus for errors such as bit errors, frame errors, and other fault conditions. When errors occur, nodes can retransmit       data or take appropriate actions.
-   9. CAN allows for message prioritization using the CAN identifier (ID). Lower ID values represent higher-priority messages, which ensures critical data is transmitted before less critical data.
-   10. CAN is extensible and scalable, making it suitable for a wide range of applications. CAN networks can range from a few nodes to hundreds or even thousands of nodes interconnected through bridges or          gateways.
-   11. Can network can continue to operate even if one or more nodes fail.
-   12. CAN is widely used in the automotive industry for various applications, including engine control, vehicle diagnostics, and infotainment systems.
-   13. CAN is standardized under ISO 11898, which defines the physical and data-link layer specifications.
-   14. CAN is known for its high reliability and robustness, making it suitable for demanding environments where noise and harsh conditions are common.
    
    
 ## Arduino Challenges
