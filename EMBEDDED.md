@@ -1,10 +1,5 @@
 ## Embedded
 
-## Basics of Arduino
-
-Arduino is tool that helps you control electronic stuff with code
-
-
 ## Basic Serial Communication Protocol
 
 Types of Communication Protocol:
