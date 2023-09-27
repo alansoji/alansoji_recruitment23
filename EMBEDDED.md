@@ -30,15 +30,6 @@ Types of Communication Protocol:
     
 9.  **Diverse Applications**: Additionally, UART serves as a pivotal communication interface for interaction between computers and external equipment, showcasing its versatility and widespread usage.
 
-      Programming Approach
-
-      Bit Banging:
-      Bit banging is a method of serial communication used in microcontroller and embedded systems 							 programming. It involves manually controlling the state of individual digital pins to transmit or receive data without relying on dedicated hardware communication peripherals like UART, SPI, or I2C. Instead, the          microcontroller or embedded system's firmware directly manipulates the pins to send or receive individual bits of data.
-
-      UART Peripherals:
-      It ia method in which the Transmit register transfers full data to shift register and the shift register and it transfers this data byte by byte to the
-      next device were the process is called parallel in serial out. The shift register of the next device collect the data one by one and transfer it to the
-      receiver register all at once were the process is called serial in parallel out.
 
       Advantages of UART:
       - Easy to interface
