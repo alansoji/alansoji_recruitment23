@@ -15,7 +15,7 @@ Simple usage of cat command
 ### Level 2-3:
 
 Spaces in file name
-	Command:cat spaces\ in\ this\ filename 
+Command:cat spaces\ in\ this\ filename 
 
 ### Level 3-4:
 
