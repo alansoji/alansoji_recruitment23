@@ -1,4 +1,4 @@
-﻿﻿## Embedded
+## Embedded
 
 ## Basics of Arduino
 
@@ -52,27 +52,27 @@ Types of Communication Protocol:
         
    ## I2C (Inter-Integrated Circuit)
 
- - **Origin and Basics**: I2C is a way for devices to talk to each other. It was made by Philips.
-
- -   **Two Wires**: It uses just two wires - one for messages (SDA) and one for timing (SCL).
+ 1.  **Communication Protocol and Origin**: I2C, short for Inter-Integrated Circuit, serves as a communication protocol facilitating interaction between electronic devices. The protocol was initially developed by Philips.
     
- -   **Master and Slaves**: There's a main boss (master) and other workers (slaves) in this system.
+2.  **Minimalist Wire Configuration**: I2C operates over a minimalistic two-wire system, utilizing one wire for message transmission (SDA) and another for timing synchronization (SCL).
     
- -   **Two-Way Traffic**: The boss and workers can talk back and forth using those two wires.
+3.  **Hierarchy: Master and Slave Architecture**: I2C follows a hierarchical architecture with a central controlling unit known as the master and peripheral devices referred to as slaves.
     
- -   **Address for Each Worker**: Each worker has its own special name (address) so the boss can talk to a specific worker.
+4.  **Bi-Directional Data Flow**: The communication in I2C is bi-directional, allowing both the master and the slaves to exchange data over the same two wires.
     
- -   **Boss Sets the Beat**: The boss controls the timing, making sure everyone is on the same page.
+5.  **Individual Addressing for Slaves**: Each slave device possesses a distinct address, enabling the master to selectively communicate with a specific slave in the network.
     
- -   **Messages in Bytes**: Information is sent in chunks of 8 bits (bytes).
+6.  **Master Governing Timing and Synchronization**: The master node in the I2C network governs the timing and synchronization, ensuring coherent communication among all devices.
     
- -   **Saying "Got It"**: After each chunk, the worker says "got it" or "not got it" to the boss.
+7.  **Message Structure in Byte Units**: Information exchange in I2C occurs in byte units, where data is transmitted and received in 8-bit chunks.
     
- -   **Different Speeds**: They can talk fast or slow, depending on what they're doing.
+8.  **Acknowledgment and Data Validation**: Following the transmission of each data chunk, the receiving device, or worker, acknowledges receipt to the master, confirming successful data reception or signaling any discrepancies.
     
- -   **Short-Distance Chat**: It's good for talking to neighbors, not for shouting across the town.
+9.  **Variable Data Transfer Speeds**: I2C supports variable data transfer speeds, accommodating communication requirements ranging from high-speed to low-speed operations based on the context.
     
- -   **Simple Compared to Others**: It's easier to use than some other talking methods.
+10.  **Suitability for Proximity Communication**: I2C is optimal for short-distance communication, effectively connecting neighboring devices within a confined vicinity.
+    
+11.  **Ease of Implementation Compared to Alternatives**: I2C is recognized for its ease of implementation and user-friendly interface, making it a more straightforward communication method in comparison to other available protocols.
  
   Bus Arbitration:
    
