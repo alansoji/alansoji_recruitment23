@@ -1,4 +1,14 @@
-## Embedded
+﻿## Embedded
+
+## Arduino
+
+The Arduino uno is a programmable microcontroller which recieves processes and sends data from and to various electronic components
+The Arduino Uno (Mostly Used For My Project) consists of 18 pins on the right and 14 pins on the left .
+It also has a USB and C port from where it could be connected to a Computer
+
+The Specific functions of the pins are arduino basics covered in the video provided 
+
+
 
 ## Basic Serial Communication Protocol
 
@@ -25,6 +35,15 @@ Types of Communication Protocol:
     
 9.  **Diverse Applications**: Additionally, UART serves as a pivotal communication interface for interaction between computers and external equipment, showcasing its versatility and widespread usage.
 
+      Programming Approach
+
+      Bit Banging:
+      Bit banging is a method of serial communication used in microcontroller and embedded systems 							 programming. It involves manually controlling the state of individual digital pins to transmit or receive data without relying on dedicated hardware communication peripherals like UART, SPI, or I2C. Instead, the          microcontroller or embedded system's firmware directly manipulates the pins to send or receive individual bits of data.
+
+      UART Peripherals:
+      It ia method in which the Transmit register transfers full data to shift register and the shift register and it transfers this data byte by byte to the
+      next device were the process is called parallel in serial out. The shift register of the next device collect the data one by one and transfer it to the
+      receiver register all at once were the process is called serial in parallel out.
 
       Advantages of UART:
       - Easy to interface
@@ -157,7 +176,7 @@ Types of Communication Protocol:
    3.Similarly connect the ground and power to the servo meter and connect the middle pin to the Digital pin(~PWM).
    4.The code associated can be obtained here:https://www.tinkercad.com/things/4tP7qeHpVUw-bi0s-2/editel?sharecode=u7rrbAj9Rax1ahm8cYE2fUk-Sed4z0_YO8oCmG1OG3I
    
-   ## 3.LCD Quiz
+   ## 2.LCD Quiz
    
    1.Complex circuit with I2C LCD board and code logic requirements.
    2.Components:LCD 16X2 (I2C),ARDUINO UNO, 4 push buttons,Resistors 10k ohm X4,Breadboard,Connecting  Wires.
