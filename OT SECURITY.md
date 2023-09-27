@@ -19,6 +19,7 @@ Exapmles of ICS:
  - (DCS) distributed control systems
 
 	used to manage locl controlleres in one location
+
 effective ot sec is non negotioable
 requirements of ot sec vendor :
 		
