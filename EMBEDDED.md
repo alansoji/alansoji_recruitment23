@@ -171,7 +171,7 @@ Types of Communication Protocol:
    3.Similarly connect the ground and power to the servo meter and connect the middle pin to the Digital pin(~PWM).
    4.The code associated can be obtained here:https://www.tinkercad.com/things/4tP7qeHpVUw-bi0s-2/editel?sharecode=u7rrbAj9Rax1ahm8cYE2fUk-Sed4z0_YO8oCmG1OG3I
    
-   ## 2.LCD Quiz
+   ## 3.LCD Quiz
    
    1.Complex circuit with I2C LCD board and code logic requirements.
    2.Components:LCD 16X2 (I2C),ARDUINO UNO, 4 push buttons,Resistors 10k ohm X4,Breadboard,Connecting  Wires.
